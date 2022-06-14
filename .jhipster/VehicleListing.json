@@ -1,0 +1,45 @@
+{
+  "applications": "*",
+  "changelogDate": "20220614112438",
+  "dto": "mapstruct",
+  "embedded": false,
+  "entityTableName": "vehicle_listing",
+  "fields": [
+    {
+      "fieldName": "price",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "year",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "mileage",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "fuel",
+      "fieldType": "FuelType",
+      "fieldValues": "DIESEL,PETROL,ELECTRIC,HYBRID_DIESEL,HYBRID_PETROL"
+    },
+    {
+      "fieldName": "status",
+      "fieldType": "ListingStatus",
+      "fieldValues": "PENDING,PUBLISHED,DEACTIVATED,SOLD"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": true,
+  "name": "VehicleListing",
+  "pagination": "pagination",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "carModel",
+      "otherEntityRelationshipName": "vehicleListing",
+      "relationshipName": "carModel",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "service": "serviceImpl"
+}

@@ -1,0 +1,54 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    <div *ngIf="vehicleListing">
+      <h2 data-cy="vehicleListingDetailsHeading"><span jhiTranslate="carplaceApp.vehicleListing.detail.title">Vehicle Listing</span></h2>
+
+      <hr />
+
+      <jhi-alert-error></jhi-alert-error>
+
+      <jhi-alert></jhi-alert>
+
+      <dl class="row-md jh-entity-details">
+        <dt><span jhiTranslate="global.field.id">ID</span></dt>
+        <dd>
+          <span>{{ vehicleListing.id }}</span>
+        </dd>
+        <dt><span jhiTranslate="carplaceApp.vehicleListing.price">Price</span></dt>
+        <dd>
+          <span>{{ vehicleListing.price }}</span>
+        </dd>
+        <dt><span jhiTranslate="carplaceApp.vehicleListing.year">Year</span></dt>
+        <dd>
+          <span>{{ vehicleListing.year }}</span>
+        </dd>
+        <dt><span jhiTranslate="carplaceApp.vehicleListing.mileage">Mileage</span></dt>
+        <dd>
+          <span>{{ vehicleListing.mileage }}</span>
+        </dd>
+        <dt><span jhiTranslate="carplaceApp.vehicleListing.fuel">Fuel</span></dt>
+        <dd>
+          <span jhiTranslate="{{ 'carplaceApp.FuelType.' + vehicleListing.fuel }}">{{ vehicleListing.fuel }}</span>
+        </dd>
+        <dt><span jhiTranslate="carplaceApp.vehicleListing.status">Status</span></dt>
+        <dd>
+          <span jhiTranslate="{{ 'carplaceApp.ListingStatus.' + vehicleListing.status }}">{{ vehicleListing.status }}</span>
+        </dd>
+        <dt><span jhiTranslate="carplaceApp.vehicleListing.carModel">Car Model</span></dt>
+        <dd>
+          <div *ngIf="vehicleListing.carModel">
+            <a [routerLink]="['/car-model', vehicleListing.carModel?.id, 'view']">{{ vehicleListing.carModel?.id }}</a>
+          </div>
+        </dd>
+      </dl>
+
+      <button type="submit" (click)="previousState()" class="btn btn-info" data-cy="entityDetailsBackButton">
+        <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Back</span>
+      </button>
+
+      <button type="button" [routerLink]="['/vehicle-listing', vehicleListing.id, 'edit']" class="btn btn-primary">
+        <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Edit</span>
+      </button>
+    </div>
+  </div>
+</div>

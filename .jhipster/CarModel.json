@@ -1,0 +1,43 @@
+{
+  "applications": "*",
+  "changelogDate": "20220614112436",
+  "dto": "mapstruct",
+  "embedded": false,
+  "entityTableName": "car_model",
+  "fields": [
+    {
+      "fieldName": "make",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "model",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "launchYear",
+      "fieldType": "Integer"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": true,
+  "name": "CarModel",
+  "pagination": "pagination",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "vehicleListing",
+      "otherEntityRelationshipName": "carModel",
+      "relationshipName": "vehicleListing",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityField": "name",
+      "otherEntityName": "category",
+      "otherEntityRelationshipName": "carModel",
+      "ownerSide": true,
+      "relationshipName": "category",
+      "relationshipType": "many-to-many"
+    }
+  ],
+  "service": "serviceImpl"
+}

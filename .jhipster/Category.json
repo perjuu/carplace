@@ -1,0 +1,28 @@
+{
+  "applications": "*",
+  "changelogDate": "20220614112437",
+  "dto": "mapstruct",
+  "embedded": false,
+  "entityTableName": "category",
+  "fields": [
+    {
+      "fieldName": "name",
+      "fieldType": "String"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": true,
+  "name": "Category",
+  "pagination": "pagination",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "carModel",
+      "otherEntityRelationshipName": "category",
+      "ownerSide": false,
+      "relationshipName": "carModel",
+      "relationshipType": "many-to-many"
+    }
+  ],
+  "service": "serviceImpl"
+}

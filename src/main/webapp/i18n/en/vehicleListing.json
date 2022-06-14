@@ -1,0 +1,29 @@
+{
+  "carplaceApp": {
+    "vehicleListing": {
+      "home": {
+        "title": "Vehicle Listings",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Vehicle Listing",
+        "createOrEditLabel": "Create or edit a Vehicle Listing",
+        "notFound": "No Vehicle Listings found"
+      },
+      "created": "A new Vehicle Listing is created with identifier {{ param }}",
+      "updated": "A Vehicle Listing is updated with identifier {{ param }}",
+      "deleted": "A Vehicle Listing is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Vehicle Listing {{ id }}?"
+      },
+      "detail": {
+        "title": "Vehicle Listing"
+      },
+      "id": "ID",
+      "price": "Price",
+      "year": "Year",
+      "mileage": "Mileage",
+      "fuel": "Fuel",
+      "status": "Status",
+      "carModel": "Car Model"
+    }
+  }
+}

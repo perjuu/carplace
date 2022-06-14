@@ -1,0 +1,29 @@
+{
+  "carplaceApp": {
+    "vehicleListing": {
+      "home": {
+        "title": "Vehicle Listings",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Creeare o nouă entitate Vehicle Listing",
+        "createOrEditLabel": "Creeare sau editare Vehicle Listing",
+        "notFound": "No Vehicle Listings found"
+      },
+      "created": "A fost creată o nouă entitate Vehicle Listing cu identificatorul {{ param }}",
+      "updated": "Vehicle Listing cu identificatorul {{ param }} a fost actualizată",
+      "deleted": "Vehicle Listing cu identificatorul {{ param }} a fost ștearsă",
+      "delete": {
+        "question": "Sunteți sigur că doriți să ștergeți Vehicle Listing {{ id }}?"
+      },
+      "detail": {
+        "title": "Vehicle Listing"
+      },
+      "id": "ID",
+      "price": "Price",
+      "year": "Year",
+      "mileage": "Mileage",
+      "fuel": "Fuel",
+      "status": "Status",
+      "carModel": "Car Model"
+    }
+  }
+}

@@ -1,0 +1,68 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    <form name="editForm" role="form" novalidate (ngSubmit)="save()" [formGroup]="editForm">
+      <h2 id="jhi-car-model-heading" data-cy="CarModelCreateUpdateHeading" jhiTranslate="carplaceApp.carModel.home.createOrEditLabel">
+        Create or edit a Car Model
+      </h2>
+
+      <div>
+        <jhi-alert-error></jhi-alert-error>
+
+        <div class="row mb-3" [hidden]="editForm.get('id')!.value == null">
+          <label class="form-label" jhiTranslate="global.field.id" for="field_id">ID</label>
+          <input type="number" class="form-control" name="id" id="field_id" data-cy="id" formControlName="id" [readonly]="true" />
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="carplaceApp.carModel.make" for="field_make">Make</label>
+          <input type="text" class="form-control" name="make" id="field_make" data-cy="make" formControlName="make" />
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="carplaceApp.carModel.model" for="field_model">Model</label>
+          <input type="text" class="form-control" name="model" id="field_model" data-cy="model" formControlName="model" />
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="carplaceApp.carModel.launchYear" for="field_launchYear">Launch Year</label>
+          <input
+            type="number"
+            class="form-control"
+            name="launchYear"
+            id="field_launchYear"
+            data-cy="launchYear"
+            formControlName="launchYear"
+          />
+        </div>
+
+        <div class="row mb-3">
+          <label jhiTranslate="carplaceApp.carModel.category" for="field_categories">Category</label>
+          <select class="form-control" id="field_categories" data-cy="category" multiple name="categories" formControlName="categories">
+            <option
+              [ngValue]="getSelectedCategory(categoryOption, editForm.get('categories')!.value)"
+              *ngFor="let categoryOption of categoriesSharedCollection; trackBy: trackCategoryById"
+            >
+              {{ categoryOption.name }}
+            </option>
+          </select>
+        </div>
+      </div>
+
+      <div>
+        <button type="button" id="cancel-save" data-cy="entityCreateCancelButton" class="btn btn-secondary" (click)="previousState()">
+          <fa-icon icon="ban"></fa-icon>&nbsp;<span jhiTranslate="entity.action.cancel">Cancel</span>
+        </button>
+
+        <button
+          type="submit"
+          id="save-entity"
+          data-cy="entityCreateSaveButton"
+          [disabled]="editForm.invalid || isSaving"
+          class="btn btn-primary"
+        >
+          <fa-icon icon="save"></fa-icon>&nbsp;<span jhiTranslate="entity.action.save">Save</span>
+        </button>
+      </div>
+    </form>
+  </div>
+</div>

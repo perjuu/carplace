@@ -1,0 +1,84 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    <form name="editForm" role="form" novalidate (ngSubmit)="save()" [formGroup]="editForm">
+      <h2
+        id="jhi-vehicle-listing-heading"
+        data-cy="VehicleListingCreateUpdateHeading"
+        jhiTranslate="carplaceApp.vehicleListing.home.createOrEditLabel"
+      >
+        Create or edit a Vehicle Listing
+      </h2>
+
+      <div>
+        <jhi-alert-error></jhi-alert-error>
+
+        <div class="row mb-3" [hidden]="editForm.get('id')!.value == null">
+          <label class="form-label" jhiTranslate="global.field.id" for="field_id">ID</label>
+          <input type="number" class="form-control" name="id" id="field_id" data-cy="id" formControlName="id" [readonly]="true" />
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="carplaceApp.vehicleListing.price" for="field_price">Price</label>
+          <input type="number" class="form-control" name="price" id="field_price" data-cy="price" formControlName="price" />
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="carplaceApp.vehicleListing.year" for="field_year">Year</label>
+          <input type="number" class="form-control" name="year" id="field_year" data-cy="year" formControlName="year" />
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="carplaceApp.vehicleListing.mileage" for="field_mileage">Mileage</label>
+          <input type="number" class="form-control" name="mileage" id="field_mileage" data-cy="mileage" formControlName="mileage" />
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="carplaceApp.vehicleListing.fuel" for="field_fuel">Fuel</label>
+          <select class="form-control" name="fuel" formControlName="fuel" id="field_fuel" data-cy="fuel">
+            <option [ngValue]="null">{{ 'carplaceApp.FuelType.null' | translate }}</option>
+            <option *ngFor="let fuelType of fuelTypeValues" [value]="fuelType">{{ 'carplaceApp.FuelType.' + fuelType | translate }}</option>
+          </select>
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="carplaceApp.vehicleListing.status" for="field_status">Status</label>
+          <select class="form-control" name="status" formControlName="status" id="field_status" data-cy="status">
+            <option [ngValue]="null">{{ 'carplaceApp.ListingStatus.null' | translate }}</option>
+            <option *ngFor="let listingStatus of listingStatusValues" [value]="listingStatus">
+              {{ 'carplaceApp.ListingStatus.' + listingStatus | translate }}
+            </option>
+          </select>
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="carplaceApp.vehicleListing.carModel" for="field_carModel">Car Model</label>
+          <select class="form-control" id="field_carModel" data-cy="carModel" name="carModel" formControlName="carModel">
+            <option [ngValue]="null"></option>
+            <option
+              [ngValue]="carModelOption.id === editForm.get('carModel')!.value?.id ? editForm.get('carModel')!.value : carModelOption"
+              *ngFor="let carModelOption of carModelsSharedCollection; trackBy: trackCarModelById"
+            >
+              {{ carModelOption.id }}
+            </option>
+          </select>
+        </div>
+      </div>
+
+      <div>
+        <button type="button" id="cancel-save" data-cy="entityCreateCancelButton" class="btn btn-secondary" (click)="previousState()">
+          <fa-icon icon="ban"></fa-icon>&nbsp;<span jhiTranslate="entity.action.cancel">Cancel</span>
+        </button>
+
+        <button
+          type="submit"
+          id="save-entity"
+          data-cy="entityCreateSaveButton"
+          [disabled]="editForm.invalid || isSaving"
+          class="btn btn-primary"
+        >
+          <fa-icon icon="save"></fa-icon>&nbsp;<span jhiTranslate="entity.action.save">Save</span>
+        </button>
+      </div>
+    </form>
+  </div>
+</div>

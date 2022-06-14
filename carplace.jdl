@@ -1,0 +1,55 @@
+
+entity CarModel {
+	make String
+    model String
+    launchYear Integer
+}
+
+entity Category {
+   name String
+}
+
+entity VehicleListing {
+	price Integer
+    year Integer
+    mileage Integer
+    fuel FuelType
+    status ListingStatus
+}
+
+enum FuelType {
+	DIESEL,
+    PETROL,
+    ELECTRIC,
+    HYBRID_DIESEL,
+    HYBRID_PETROL
+}
+
+enum ListingStatus {
+	PENDING,
+    PUBLISHED,
+    DEACTIVATED,
+    SOLD
+}
+
+relationship ManyToMany {
+	CarModel{category(name)} to Category{carModel}
+}
+
+relationship OneToMany {
+	CarModel{vehicleListing} to VehicleListing
+}
+
+dto * with mapstruct
+
+paginate all with pagination
+
+// Use Data Transfer Objects (DTO)
+// dto * with mapstruct
+
+// Set service options to all except few
+service all with serviceImpl
+filter all
+
+// Set an angular suffix
+// angularSuffix * with mySuffix

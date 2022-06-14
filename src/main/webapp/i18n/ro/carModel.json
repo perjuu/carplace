@@ -1,0 +1,28 @@
+{
+  "carplaceApp": {
+    "carModel": {
+      "home": {
+        "title": "Car Models",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Creeare o nouă entitate Car Model",
+        "createOrEditLabel": "Creeare sau editare Car Model",
+        "notFound": "No Car Models found"
+      },
+      "created": "A fost creată o nouă entitate Car Model cu identificatorul {{ param }}",
+      "updated": "Car Model cu identificatorul {{ param }} a fost actualizată",
+      "deleted": "Car Model cu identificatorul {{ param }} a fost ștearsă",
+      "delete": {
+        "question": "Sunteți sigur că doriți să ștergeți Car Model {{ id }}?"
+      },
+      "detail": {
+        "title": "Car Model"
+      },
+      "id": "ID",
+      "make": "Make",
+      "model": "Model",
+      "launchYear": "Launch Year",
+      "vehicleListing": "Vehicle Listing",
+      "category": "Category"
+    }
+  }
+}

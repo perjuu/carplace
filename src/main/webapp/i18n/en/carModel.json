@@ -1,0 +1,28 @@
+{
+  "carplaceApp": {
+    "carModel": {
+      "home": {
+        "title": "Car Models",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Car Model",
+        "createOrEditLabel": "Create or edit a Car Model",
+        "notFound": "No Car Models found"
+      },
+      "created": "A new Car Model is created with identifier {{ param }}",
+      "updated": "A Car Model is updated with identifier {{ param }}",
+      "deleted": "A Car Model is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Car Model {{ id }}?"
+      },
+      "detail": {
+        "title": "Car Model"
+      },
+      "id": "ID",
+      "make": "Make",
+      "model": "Model",
+      "launchYear": "Launch Year",
+      "vehicleListing": "Vehicle Listing",
+      "category": "Category"
+    }
+  }
+}

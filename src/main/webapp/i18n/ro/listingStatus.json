@@ -1,0 +1,11 @@
+{
+  "carplaceApp": {
+    "ListingStatus": {
+      "null": "",
+      "PENDING": "PENDING",
+      "PUBLISHED": "PUBLISHED",
+      "DEACTIVATED": "DEACTIVATED",
+      "SOLD": "SOLD"
+    }
+  }
+}
