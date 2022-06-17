@@ -25,6 +25,10 @@
             <column name="password_hash" type="varchar(60)"/>
             <column name="first_name" type="varchar(50)"/>
             <column name="last_name" type="varchar(50)"/>
+            <column name="dealer_name" type="varchar(50)"/>
+            <column name="city" type="varchar(85)"/>
+            <column name="address" type="varchar(254)"/>
+            <column name="contact_phone" type="varchar(50)"/>
             <column name="email" type="varchar(191)">
                 <constraints unique="true" nullable="true" uniqueConstraintName="ux_user_email"/>
             </column>

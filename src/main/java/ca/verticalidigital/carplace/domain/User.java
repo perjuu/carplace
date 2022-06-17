@@ -52,6 +52,22 @@ public class User extends AbstractAuditingEntity implements Serializable {
     @Column(name = "last_name", length = 50)
     private String lastName;
 
+    @Size(max = 50)
+    @Column(name = "dealer_name", length = 50, nullable = false)
+    private String dealerName;
+
+    @Size(max = 85)
+    @Column(length = 85, nullable = false)
+    private String city;
+
+    @Size(min = 5, max = 254)
+    @Column(length = 254, nullable = false)
+    private String address;
+
+    @Size(min = 5, max = 50)
+    @Column(name = "contact_phone", length = 50, nullable = false)
+    private String contactPhone;
+
     @Email
     @Size(min = 5, max = 254)
     @Column(length = 254, unique = true)
@@ -132,6 +148,34 @@ public class User extends AbstractAuditingEntity implements Serializable {
 
     public void setLastName(String lastName) {
         this.lastName = lastName;
+    }
+
+    public String getDealerName() {
+        return dealerName;
+    }
+    public void setDealerName(String dealerName) {
+        this.dealerName = dealerName;
+    }
+
+    public String getCity() {
+        return city;
+    }
+    public void setCity(String city) {
+        this.city = city;
+    }
+
+    public String getAddress() {
+        return address;
+    }
+    public void setAddress(String address) {
+        this.address = address;
+    }
+
+    public String getContactPhone() {
+        return contactPhone;
+    }
+    public void setContactPhone(String contactPhone) {
+        this.contactPhone = contactPhone;
     }
 
     public String getEmail() {
@@ -222,6 +266,10 @@ public class User extends AbstractAuditingEntity implements Serializable {
             "login='" + login + '\'' +
             ", firstName='" + firstName + '\'' +
             ", lastName='" + lastName + '\'' +
+            ", dealerName='" + dealerName + '\'' +
+            ", city='" + city + '\'' +
+            ", address='" + address + '\'' +
+            ", contactPhone='" + contactPhone + '\'' +
             ", email='" + email + '\'' +
             ", imageUrl='" + imageUrl + '\'' +
             ", activated='" + activated + '\'' +

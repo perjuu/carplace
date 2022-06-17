@@ -26,6 +26,18 @@ public class AdminUserDTO {
     @Size(max = 50)
     private String lastName;
 
+    @Size(max = 50)
+    private String dealerName;
+
+    @Size(max = 85)
+    private String city;
+
+    @Size(min = 5, max = 254)
+    private String address;
+
+    @Size(min = 5, max = 50)
+    private String contactPhone;
+
     @Email
     @Size(min = 5, max = 254)
     private String email;
@@ -57,6 +69,10 @@ public class AdminUserDTO {
         this.login = user.getLogin();
         this.firstName = user.getFirstName();
         this.lastName = user.getLastName();
+        this.dealerName = user.getDealerName();
+        this.city = user.getCity();
+        this.address = user.getAddress();
+        this.contactPhone = user.getContactPhone();
         this.email = user.getEmail();
         this.activated = user.isActivated();
         this.imageUrl = user.getImageUrl();
@@ -98,6 +114,34 @@ public class AdminUserDTO {
 
     public void setLastName(String lastName) {
         this.lastName = lastName;
+    }
+
+    public String getDealerName() {
+        return dealerName;
+    }
+    public void setDealerName(String dealerName) {
+        this.dealerName = dealerName;
+    }
+
+    public String getCity() {
+        return city;
+    }
+    public void setCity(String city) {
+        this.city = city;
+    }
+
+    public String getAddress() {
+        return address;
+    }
+    public void setAddress(String address) {
+        this.address = address;
+    }
+
+    public String getContactPhone() {
+        return contactPhone;
+    }
+    public void setContactPhone(String contactPhone) {
+        this.contactPhone = contactPhone;
     }
 
     public String getEmail() {
@@ -179,6 +223,10 @@ public class AdminUserDTO {
             "login='" + login + '\'' +
             ", firstName='" + firstName + '\'' +
             ", lastName='" + lastName + '\'' +
+            ", dealerName='" + dealerName + '\'' +
+            ", city='" + city + '\'' +
+            ", address='" + address + '\'' +
+            ", contactPhone='" + contactPhone + '\'' +
             ", email='" + email + '\'' +
             ", imageUrl='" + imageUrl + '\'' +
             ", activated=" + activated +
