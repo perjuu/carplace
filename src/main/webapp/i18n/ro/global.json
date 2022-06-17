@@ -54,7 +54,15 @@
       "confirmpassword.label": "Confirma parolă",
       "confirmpassword.placeholder": "Confirmați noua parolă",
       "email.label": "Email",
-      "email.placeholder": "Emailul dumneavoastră"
+      "email.placeholder": "Emailul dumneavoastră",
+      "dealername.label": "Numele dealerului",
+      "dealername.placeholder": "Numele dvs. de dealer",
+      "city.label": "Oraș",
+      "city.placeholder": "Orașul tau",
+      "address.label": "Adresa",
+      "address.placeholder": "Adresa ta",
+      "phone.label": "Număr de Contact",
+      "phone.placeholder": "Numărul dvs. de contact"
     },
     "messages": {
       "info": {

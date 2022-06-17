@@ -45,7 +45,15 @@
       "confirmpassword.label": "New password confirmation",
       "confirmpassword.placeholder": "Confirm the new password",
       "email.label": "Email",
-      "email.placeholder": "Your email"
+      "email.placeholder": "Your email",
+      "dealername.label": "Dealer Name",
+      "dealername.placeholder": "Your dealer name",
+      "city.label": "City",
+      "city.placeholder": "Your city",
+      "address.label": "Address",
+      "address.placeholder": "Your address",
+      "phone.label": "Contact Phone",
+      "phone.placeholder": "Your contact phone"
     },
     "messages": {
       "info": {

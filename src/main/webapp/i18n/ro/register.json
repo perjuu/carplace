@@ -11,6 +11,30 @@
           "minlength": "Numele de utilizator nu poate fi mai scurt de 1 caracter.",
           "maxlength": "Numele de utilizator nu poate fi mai lung de 50 caractere.",
           "pattern": "Your username is invalid."
+        },
+        "dealername": {
+          "required": "Numele dvs. de dealer este obligatoriu.",
+          "invalid": "Numele dvs. de dealer este invalid.",
+          "minlength": "Numele dvs. de dealer trebuie să aibă cel puțin 1 caracter.",
+          "maxlength": "Numele dvs. de dealer nu poate avea mai mult de 50 de caractere."
+        },
+        "city": {
+          "required": "Orașul dvs. este obligatoriu.",
+          "invalid": "Orașul dvs. este invalid.",
+          "minlength": "Orașul dvs. trebuie să aibă cel puțin 1 caracter.",
+          "maxlength": "Orașul dvs. nu poate avea mai mult de 50 de caractere."
+        },
+        "address": {
+          "required": "Adresa dvs. este obligatorie.",
+          "invalid": "Adresa dvs. este nevalidă.",
+          "minlength": "Adresa dvs. trebuie să aibă cel puțin 1 caracter.",
+          "maxlength": "Adresa dvs. nu poate avea mai mult de 50 de caractere."
+        },
+        "phone": {
+          "required": "Numărul dvs. de telefon este obligatoriu.",
+          "invalid": "Numărul dvs. de telefon este invalid.",
+          "minlength": "Numărul dvs. de telefon trebuie să aibă cel puțin 1 caracter.",
+          "maxlength": "Numărul dvs. de telefon nu poate depăși 50 de caractere."
         }
       },
       "success": "<strong>Înregistrare salvată!</strong> Vă rugăm să vă verificați emailul pentru confirmare.",

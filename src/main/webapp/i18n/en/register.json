@@ -11,6 +11,30 @@
           "minlength": "Your username is required to be at least 1 character.",
           "maxlength": "Your username cannot be longer than 50 characters.",
           "pattern": "Your username is invalid."
+        },
+        "dealername": {
+          "required": "Your dealer name is required.",
+          "invalid": "Your dealer name is invalid.",
+          "minlength": "Your dealer name is required to be at least 1 character.",
+          "maxlength": "Your dealer name cannot be longer than 50 characters."
+        },
+        "city": {
+          "required": "Your city is required.",
+          "invalid": "Your city is invalid.",
+          "minlength": "Your city is required to be at least 1 character.",
+          "maxlength": "Your city cannot be longer than 50 characters."
+        },
+        "address": {
+          "required": "Your address is required.",
+          "invalid": "Your address is invalid.",
+          "minlength": "Your address is required to be at least 1 character.",
+          "maxlength": "Your address cannot be longer than 50 characters."
+        },
+        "phone": {
+          "required": "Your phone number is required.",
+          "invalid": "Your phone number is invalid.",
+          "minlength": "Your phone number is required to be at least 1 character.",
+          "maxlength": "Your phone number cannot be longer than 50 characters."
         }
       },
       "success": "<strong>Registration saved!</strong> Please check your email for confirmation.",
