@@ -38,6 +38,14 @@
     "form": {
       "username.label": "Username",
       "username.placeholder": "Your username",
+      "name.label": "Dealer",
+      "name.placeholder": "Dealer name",
+      "city.label": "City",
+      "city.placeholder": "Your city",
+      "address.label": "Address",
+      "address.placeholder": "Your address",
+      "phone.label": "Phone",
+      "phone.placeholder": "Your phone number",
       "currentpassword.label": "Current password",
       "currentpassword.placeholder": "Current password",
       "newpassword.label": "New password",
@@ -45,15 +53,7 @@
       "confirmpassword.label": "New password confirmation",
       "confirmpassword.placeholder": "Confirm the new password",
       "email.label": "Email",
-      "email.placeholder": "Your email",
-      "dealername.label": "Dealer Name",
-      "dealername.placeholder": "Your dealer name",
-      "city.label": "City",
-      "city.placeholder": "Your city",
-      "address.label": "Address",
-      "address.placeholder": "Your address",
-      "phone.label": "Contact Phone",
-      "phone.placeholder": "Your contact phone"
+      "email.placeholder": "Your email"
     },
     "messages": {
       "info": {

@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.6.xsd
+                        http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
+
+    <!--
+        Added the entity VehicleListing.
+    -->
+    <changeSet id="20220622112438-1" author="jhipster">
+        <createTable tableName="vehicle_listing">
+            <column name="id" type="bigint">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="price" type="integer">
+                <constraints nullable="true" />
+            </column>
+            <column name="year" type="integer">
+                <constraints nullable="true" />
+            </column>
+            <column name="mileage" type="integer">
+                <constraints nullable="false" />
+            </column>
+            <column name="fuel" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="status" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+
+
+            <column name="internal_number" type="varchar(40)">
+                <constraints nullable="false" />
+            </column>
+            <column name="performance" type="integer">
+                <constraints nullable="true" />
+            </column>
+            <column name="mot" type="timestamp">
+                <constraints nullable="true"/>
+            </column>
+            <column name="reg_date" type="timestamp">
+                <constraints nullable="true"/>
+            </column>
+            <column name="vat" type="boolean" valueBoolean="false">
+                <constraints nullable="false" />
+            </column>
+            <column name="vin" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="colour" type="varchar(32)">
+                <constraints nullable="true" />
+            </column>
+            <column name="ac" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="esp" type="boolean" valueBoolean="false">
+                <constraints nullable="false" />
+            </column>
+            <column name="abs" type="boolean" valueBoolean="false">
+                <constraints nullable="false" />
+            </column>
+            <column name="doors" type="integer">
+                <constraints nullable="true" />
+            </column>
+            <column name="cubic_capacity" type="integer">
+                <constraints nullable="true" />
+            </column>
+            <column name="number_of_seats" type="integer">
+                <constraints nullable="true" />
+            </column>
+            <column name="emission_class" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            <column name="emission" type="integer">
+                <constraints nullable="true" />
+            </column>
+            <column name="gearbox" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+
+
+
+            <column name="car_model_id" type="bigint">
+                <constraints nullable="true" />
+            </column>
+            <!-- jhipster-needle-liquibase-add-column - JHipster will add columns here -->
+        </createTable>
+    </changeSet>
+
+    <!-- jhipster-needle-liquibase-add-changeset - JHipster will add changesets here -->
+
+    <!--
+        Load sample data generated with Faker.js
+        - This data can be easily edited using a CSV editor (or even MS Excel) and
+          is located in the 'src/main/resources/config/liquibase/fake-data' directory
+        - By default this data is applied when running with the JHipster 'dev' profile.
+          This can be customized by adding or removing 'faker' in the 'spring.liquibase.contexts'
+          Spring Boot configuration key.
+    -->
+    <changeSet id="20220622112438-1-data" author="jhipster" context="faker">
+        <loadData
+            file="config/liquibase/fake-data/01_vehicle_listing.csv"
+            separator=";"
+            tableName="vehicle_listing"
+            usePreparedStatements="true">
+            <column name="id" type="numeric"/>
+            <column name="price" type="numeric"/>
+            <column name="year" type="numeric"/>
+            <column name="mileage" type="numeric"/>
+            <column name="fuel" type="string"/>
+            <column name="status" type="string"/>
+
+            <column name="internal_number" type="string"/>
+            <column name="performance" type="numeric"/>
+            <column name="vat" type="boolean"/>
+            <column name="vin" type="string"/>
+            <column name="colour" type="string"/>
+            <column name="ac" type="string"/>
+            <column name="esp" type="boolean"/>
+            <column name="abs" type="boolean"/>
+            <column name="doors" type="numeric"/>
+            <column name="cubic_capacity" type="numeric"/>
+            <column name="number_of_seats" type="numeric"/>
+            <column name="emission_class" type="string"/>
+            <column name="emission" type="numeric"/>
+            <column name="gearbox" type="string"/>
+
+            <column name="reg_date" type="timestamp"/>
+
+            <!-- jhipster-needle-liquibase-add-loadcolumn - JHipster (and/or extensions) can add load columns here -->
+        </loadData>
+        <dropDefaultValue tableName="vehicle_listing" columnName="reg_date" columnDataType="${datetimeType}"/>
+    </changeSet>
+</databaseChangeLog>

@@ -26,6 +26,94 @@
         <dd>
           <span>{{ vehicleListing.mileage }}</span>
         </dd>
+
+        <!-- New fields -->
+
+        <dt><span>Internal number</span></dt>
+        <dd>
+          <span>{{ vehicleListing.internalNumber}}</span>
+        </dd>
+
+        <dt><span>Category</span></dt>
+        <dd>
+          <span *ngFor="let category of vehicleListing.categories; let last = last">
+            <a [routerLink]="['/category', category?.id, 'view']">{{ category.name }}</a
+            >{{ last ? '' : ', ' }}
+          </span>
+        </dd>
+
+        <dt><span>Make</span></dt>
+        <dd>
+          <span>{{ vehicleListing.carModel?.make }}</span>
+        </dd>
+
+        <dt><span>Mot</span></dt>
+        <dd>
+          <span>{{ vehicleListing.mot }}</span>
+        </dd>
+
+        <dt><span>Registration date</span></dt>
+        <dd>
+          <span>{{ vehicleListing.regDate }}</span>
+        </dd>
+
+        <dt><span>Vehicle identification number</span></dt>
+        <dd>
+          <span>{{ vehicleListing.vin }}</span>
+        </dd>
+
+        <dt><span>Colour</span></dt>
+        <dd>
+          <span>{{ vehicleListing.colour }}</span>
+        </dd>
+
+        <dt><span>A/C</span></dt>
+        <dd>
+          <span>{{ vehicleListing.ac }}</span>
+        </dd>
+
+        <dt><span>ESP</span></dt>
+        <dd>
+          <span>{{ vehicleListing.esp }}</span>
+        </dd>
+
+        <dt><span>ABS</span></dt>
+        <dd>
+          <span>{{ vehicleListing.abs }}</span>
+        </dd>
+
+        <dt><span>Number of doors</span></dt>
+        <dd>
+          <span>{{ vehicleListing.doors }}</span>
+        </dd>
+
+        <dt><span>Cubic capacity</span></dt>
+        <dd>
+          <span>{{ vehicleListing.cubicCapacity }}</span>
+        </dd>
+
+        <dt><span>Number of seats</span></dt>
+        <dd>
+          <span>{{ vehicleListing.numberOfSeats }}</span>
+        </dd>
+
+        <dt><span>Emission Class</span></dt>
+        <dd>
+          <span>{{ vehicleListing.emissionClass }}</span>
+        </dd>
+
+        <dt><span>Emission</span></dt>
+        <dd>
+          <span>{{ vehicleListing.emission }}</span>
+        </dd>
+
+        <dt><span>Gear Box</span></dt>
+        <dd>
+          <span>{{ vehicleListing.gearbox }}</span>
+        </dd>
+
+        <!-- Ending new fields -->
+
         <dt><span jhiTranslate="carplaceApp.vehicleListing.fuel">Fuel</span></dt>
         <dd>
           <span jhiTranslate="{{ 'carplaceApp.FuelType.' + vehicleListing.fuel }}">{{ vehicleListing.fuel }}</span>
@@ -34,6 +122,8 @@
         <dd>
           <span jhiTranslate="{{ 'carplaceApp.ListingStatus.' + vehicleListing.status }}">{{ vehicleListing.status }}</span>
         </dd>
+
+
         <dt><span jhiTranslate="carplaceApp.vehicleListing.carModel">Car Model</span></dt>
         <dd>
           <div *ngIf="vehicleListing.carModel">

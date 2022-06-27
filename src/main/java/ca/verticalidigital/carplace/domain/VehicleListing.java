@@ -1,12 +1,15 @@
 package ca.verticalidigital.carplace.domain;
 
-import ca.verticalidigital.carplace.domain.enumeration.FuelType;
-import ca.verticalidigital.carplace.domain.enumeration.ListingStatus;
+import ca.verticalidigital.carplace.domain.enumeration.*;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-import java.io.Serializable;
-import javax.persistence.*;
 import org.hibernate.annotations.Cache;
 import org.hibernate.annotations.CacheConcurrencyStrategy;
+
+import javax.persistence.*;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
+import java.io.Serializable;
+import java.time.Instant;
 
 /**
  * A VehicleListing.
@@ -30,6 +33,7 @@ public class VehicleListing implements Serializable {
     @Column(name = "year")
     private Integer year;
 
+    @NotNull
     @Column(name = "mileage")
     private Integer mileage;
 
@@ -40,6 +44,61 @@ public class VehicleListing implements Serializable {
     @Enumerated(EnumType.STRING)
     @Column(name = "status")
     private ListingStatus status;
+
+    @NotNull
+    @Size(max = 40)
+    @Column(name="internal_number", length = 40)
+    private String internalNumber;
+
+    @Column(name = "performance")
+    private Integer performance;
+
+    @Column(name = "mot")
+    private Instant mot;
+
+    @Column(name = "reg_date")
+    private Instant regDate;
+
+    @NotNull
+    @Column(name = "vat")
+    private Boolean vat;
+
+    @Column(name = "vin")
+    private String vin;
+
+    @Size(max = 32)
+    @Column(name = "colour", length = 32)
+    private String colour;
+
+    @Enumerated(EnumType.STRING)
+    @Column(name = "ac")
+    private Ac ac;
+
+    @Column(name = "esp")
+    private Boolean esp;
+
+    @Column(name = "abs")
+    private Boolean abs;
+
+    @Column(name = "doors")
+    private Integer doors;
+
+    @Column(name = "cubic_capacity")
+    private Integer cubicCapacity;
+
+    @Column(name = "number_of_seats")
+    private Integer numberOfSeats;
+
+    @Enumerated(EnumType.STRING)
+    @Column(name = "emission_class")
+    private EmissionClass emissionClass;
+
+    @Column(name = "emission")
+    private Integer emission;
+
+    @Enumerated(EnumType.STRING)
+    @Column(name = "gearbox")
+    private Gearbox gearbox;
 
     @ManyToOne
     @JsonIgnoreProperties(value = { "vehicleListings", "categories" }, allowSetters = true)
@@ -138,6 +197,211 @@ public class VehicleListing implements Serializable {
         return this;
     }
 
+    public String getInternalNumber() {
+        return internalNumber;
+    }
+
+    public VehicleListing internalNumber(String in){
+        this.setInternalNumber(in);
+        return this;
+    }
+
+    public void setInternalNumber(String internalNumber) {
+        this.internalNumber = internalNumber;
+    }
+
+    public Integer getPerformance() {
+        return performance;
+    }
+
+    public VehicleListing performance(Integer performance){
+        this.setPerformance(performance);
+        return this;
+    }
+
+    public void setPerformance(Integer performance) {
+        this.performance = performance;
+    }
+
+    public Instant getMot() {
+        return mot;
+    }
+
+    public VehicleListing mot(Instant mot){
+        this.setMot(mot);
+        return this;
+    }
+
+    public void setMot(Instant mot) {
+        this.mot = mot;
+    }
+
+    public Instant getRegDate() {
+        return regDate;
+    }
+
+    public VehicleListing regDate(Instant regDate){
+        this.setRegDate(regDate);
+        return this;
+    }
+
+    public void setRegDate(Instant regDate) {
+        this.regDate = regDate;
+    }
+
+    public Boolean getVat() {
+        return vat;
+    }
+
+    public VehicleListing vat(Boolean vat){
+        this.setVat(vat);
+        return this;
+    }
+
+    public void setVat(Boolean vat) {
+        this.vat = vat;
+    }
+
+    public String getVin() {
+        return vin;
+    }
+
+    public VehicleListing vin(String vin){
+        this.setVin(vin);
+        return this;
+    }
+
+    public void setVin(String vin) {
+        this.vin = vin;
+    }
+
+    public String getColour() {
+        return colour;
+    }
+
+    public VehicleListing colour(String colour){
+        this.setColour(colour);
+        return this;
+    }
+
+    public void setColour(String colour) {
+        this.colour = colour;
+    }
+
+    public Ac getAc() {
+        return ac;
+    }
+
+    public VehicleListing ac(Ac ac){
+        this.setAc(ac);
+        return this;
+    }
+
+    public void setAc(Ac ac) {
+        this.ac = ac;
+    }
+
+    public Boolean getEsp() {
+        return esp;
+    }
+
+    public VehicleListing esp(Boolean esp){
+        this.setEsp(esp);
+        return this;
+    }
+    public void setEsp(Boolean esp) {
+        this.esp = esp;
+    }
+
+    public Boolean getAbs() {
+        return abs;
+    }
+
+    public VehicleListing abs(Boolean abs){
+        this.setAbs(abs);
+        return this;
+    }
+    public void setAbs(Boolean abs) {
+        this.abs = abs;
+    }
+
+    public Integer getDoors() {
+        return doors;
+    }
+
+    public VehicleListing doors(Integer doors){
+        this.setDoors(doors);
+        return this;
+    }
+    public void setDoors(Integer doors) {
+        this.doors = doors;
+    }
+
+    public Integer getCubicCapacity() {
+        return cubicCapacity;
+    }
+
+    public VehicleListing cubicCapacity(Integer cubicCapacity){
+        this.setCubicCapacity(cubicCapacity);
+        return this;
+    }
+
+    public void setCubicCapacity(Integer cubicCapacity) {
+        this.cubicCapacity = cubicCapacity;
+    }
+
+    public Integer getNumberOfSeats() {
+        return numberOfSeats;
+    }
+
+    public VehicleListing numberOfSeats(Integer numberOfSeats){
+        this.setNumberOfSeats(numberOfSeats);
+        return this;
+    }
+
+    public void setNumberOfSeats(Integer numberOfSeats) {
+        this.numberOfSeats = numberOfSeats;
+    }
+
+    public EmissionClass getEmissionClass() {
+        return emissionClass;
+    }
+
+    public VehicleListing emissionClass(EmissionClass emissionClass){
+        this.setEmissionClass(emissionClass);
+        return this;
+    }
+
+    public void setEmissionClass(EmissionClass emissionClass) {
+        this.emissionClass = emissionClass;
+    }
+
+    public Integer getEmission() {
+        return emission;
+    }
+
+    public void setEmission(Integer emission) {
+        this.emission = emission;
+    }
+
+    public VehicleListing emission(Integer emission){
+        this.setEmission(emission);
+        return this;
+    }
+    public Gearbox getGearbox() {
+        return gearbox;
+    }
+
+    public VehicleListing gearbox(Gearbox gearbox){
+        this.setGearbox(gearbox);
+        return this;
+    }
+
+    public void setGearbox(Gearbox gearbox) {
+        this.gearbox = gearbox;
+    }
+
+
     // jhipster-needle-entity-add-getters-setters - JHipster will add getters and setters here
 
     @Override
@@ -158,15 +422,33 @@ public class VehicleListing implements Serializable {
     }
 
     // prettier-ignore
+
     @Override
     public String toString() {
         return "VehicleListing{" +
-            "id=" + getId() +
-            ", price=" + getPrice() +
-            ", year=" + getYear() +
-            ", mileage=" + getMileage() +
-            ", fuel='" + getFuel() + "'" +
-            ", status='" + getStatus() + "'" +
-            "}";
+            "id=" + id +
+            ", price=" + price +
+            ", year=" + year +
+            ", mileage=" + mileage +
+            ", fuel=" + fuel +
+            ", status=" + status +
+            ", internalNumber='" + internalNumber + '\'' +
+            ", performance=" + performance +
+            ", mot=" + mot +
+            ", regDate=" + regDate +
+            ", vat=" + vat +
+            ", vin='" + vin + '\'' +
+            ", colour='" + colour + '\'' +
+            ", ac=" + ac +
+            ", esp=" + esp +
+            ", abs=" + abs +
+            ", doors=" + doors +
+            ", cubicCapacity=" + cubicCapacity +
+            ", numberOfSeats=" + numberOfSeats +
+            ", emissionClass=" + emissionClass +
+            ", emission=" + emission +
+            ", gearbox=" + gearbox +
+            ", carModel=" + carModel +
+            '}';
     }
 }

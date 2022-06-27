@@ -7,6 +7,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 
 import ca.verticalidigital.carplace.IntegrationTest;
 import ca.verticalidigital.carplace.config.Constants;
+import ca.verticalidigital.carplace.domain.Dealer;
 import ca.verticalidigital.carplace.domain.User;
 import ca.verticalidigital.carplace.repository.AuthorityRepository;
 import ca.verticalidigital.carplace.repository.UserRepository;
@@ -91,6 +92,12 @@ class AccountResourceIT {
         user.setImageUrl("http://placehold.it/50x50");
         user.setLangKey("en");
         user.setAuthorities(authorities);
+        Dealer dealer = new Dealer();
+        dealer.setName("Dealer name");
+        dealer.setCity("City");
+        dealer.setAddress("Address");
+        dealer.setPhone("0551545465496");
+        user.setDealer(dealer);
         userService.createUser(user);
 
         restAccountMockMvc

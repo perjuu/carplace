@@ -1,12 +1,14 @@
 package ca.verticalidigital.carplace.domain;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import org.hibernate.annotations.Cache;
+import org.hibernate.annotations.CacheConcurrencyStrategy;
+
+import javax.persistence.*;
+import javax.validation.constraints.NotNull;
 import java.io.Serializable;
 import java.util.HashSet;
 import java.util.Set;
-import javax.persistence.*;
-import org.hibernate.annotations.Cache;
-import org.hibernate.annotations.CacheConcurrencyStrategy;
 
 /**
  * A CarModel.
@@ -24,9 +26,11 @@ public class CarModel implements Serializable {
     @Column(name = "id")
     private Long id;
 
+    @NotNull
     @Column(name = "make")
     private String make;
 
+    @NotNull
     @Column(name = "model")
     private String model;
 
@@ -38,6 +42,7 @@ public class CarModel implements Serializable {
     @JsonIgnoreProperties(value = { "carModel" }, allowSetters = true)
     private Set<VehicleListing> vehicleListings = new HashSet<>();
 
+    @NotNull
     @ManyToMany
     @JoinTable(
         name = "rel_car_model__category",

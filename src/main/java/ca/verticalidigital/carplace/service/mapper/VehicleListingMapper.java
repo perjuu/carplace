@@ -15,7 +15,5 @@ public interface VehicleListingMapper extends EntityMapper<VehicleListingDTO, Ve
     VehicleListingDTO toDto(VehicleListing s);
 
     @Named("carModelId")
-    @BeanMapping(ignoreByDefault = true)
-    @Mapping(target = "id", source = "id")
     CarModelDTO toDtoCarModelId(CarModel carModel);
 }

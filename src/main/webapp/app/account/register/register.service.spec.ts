@@ -29,9 +29,13 @@ describe('RegisterService Service', () => {
       // GIVEN
       const login = 'abc';
       const email = 'test@test.com';
+      const name = 'dealer-name'
       const password = 'pass';
+      const city = 'Oradea';
+      const address = 'street nr 1';
+      const phone = '0734523451'
       const langKey = 'FR';
-      const registration = new Registration(login, email, password, langKey);
+      const registration = new Registration(login, name, email, password, city, address, phone, langKey);
 
       // WHEN
       service.save(registration).subscribe();
@@ -42,7 +46,7 @@ describe('RegisterService Service', () => {
       });
 
       // THEN
-      expect(testRequest.request.body).toEqual({ email, langKey, login, password });
+      expect(testRequest.request.body).toEqual({ email, name, city, address, phone, langKey, login, password });
     });
   });
 });

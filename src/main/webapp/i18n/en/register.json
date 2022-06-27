@@ -12,7 +12,7 @@
           "maxlength": "Your username cannot be longer than 50 characters.",
           "pattern": "Your username is invalid."
         },
-        "dealername": {
+        "name": {
           "required": "Your dealer name is required.",
           "invalid": "Your dealer name is invalid.",
           "minlength": "Your dealer name is required to be at least 1 character.",

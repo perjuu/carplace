@@ -12,29 +12,29 @@
           "maxlength": "Numele de utilizator nu poate fi mai lung de 50 caractere.",
           "pattern": "Your username is invalid."
         },
-        "dealername": {
-          "required": "Numele dvs. de dealer este obligatoriu.",
-          "invalid": "Numele dvs. de dealer este invalid.",
-          "minlength": "Numele dvs. de dealer trebuie să aibă cel puțin 1 caracter.",
-          "maxlength": "Numele dvs. de dealer nu poate avea mai mult de 50 de caractere."
+        "name": {
+          "required": "Numele dealerului este obligatoriu.",
+          "invalid": "Numele dealerului este invalid.",
+          "minlength": "Numele dealerului trebuie să aibă cel puțin 1 caracter.",
+          "maxlength": "Numele dealerului nu poate avea mai mult de 50 de caractere."
         },
         "city": {
-          "required": "Orașul dvs. este obligatoriu.",
-          "invalid": "Orașul dvs. este invalid.",
-          "minlength": "Orașul dvs. trebuie să aibă cel puțin 1 caracter.",
-          "maxlength": "Orașul dvs. nu poate avea mai mult de 50 de caractere."
+          "required": "Orașul este obligatoriu.",
+          "invalid": "Orașul este invalid.",
+          "minlength": "Orașul trebuie să aibă cel puțin 1 caracter.",
+          "maxlength": "Orașul nu poate avea mai mult de 50 de caractere."
         },
         "address": {
-          "required": "Adresa dvs. este obligatorie.",
-          "invalid": "Adresa dvs. este nevalidă.",
-          "minlength": "Adresa dvs. trebuie să aibă cel puțin 1 caracter.",
-          "maxlength": "Adresa dvs. nu poate avea mai mult de 50 de caractere."
+          "required": "Adresa este obligatorie.",
+          "invalid": "Adresa este nevalidă.",
+          "minlength": "Adresa trebuie să aibă cel puțin 1 caracter.",
+          "maxlength": "Adresa nu poate avea mai mult de 50 de caractere."
         },
         "phone": {
-          "required": "Numărul dvs. de telefon este obligatoriu.",
-          "invalid": "Numărul dvs. de telefon este invalid.",
-          "minlength": "Numărul dvs. de telefon trebuie să aibă cel puțin 1 caracter.",
-          "maxlength": "Numărul dvs. de telefon nu poate depăși 50 de caractere."
+          "required": "Numărul de telefon este obligatoriu.",
+          "invalid": "Numărul de telefon este invalid.",
+          "minlength": "Numărul de telefon trebuie să aibă cel puțin 1 caracter.",
+          "maxlength": "Numărul de telefon nu poate depăși 50 de caractere."
         }
       },
       "success": "<strong>Înregistrare salvată!</strong> Vă rugăm să vă verificați emailul pentru confirmare.",

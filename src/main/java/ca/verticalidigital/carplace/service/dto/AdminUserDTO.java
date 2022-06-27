@@ -2,6 +2,7 @@ package ca.verticalidigital.carplace.service.dto;
 
 import ca.verticalidigital.carplace.config.Constants;
 import ca.verticalidigital.carplace.domain.Authority;
+import ca.verticalidigital.carplace.domain.Dealer;
 import ca.verticalidigital.carplace.domain.User;
 import java.time.Instant;
 import java.util.Set;
@@ -48,6 +49,8 @@ public class AdminUserDTO {
 
     private Set<String> authorities;
 
+    private Dealer dealer;
+
     public AdminUserDTO() {
         // Empty constructor needed for Jackson.
     }
@@ -66,6 +69,7 @@ public class AdminUserDTO {
         this.lastModifiedBy = user.getLastModifiedBy();
         this.lastModifiedDate = user.getLastModifiedDate();
         this.authorities = user.getAuthorities().stream().map(Authority::getName).collect(Collectors.toSet());
+        this.dealer = user.getDealer();
     }
 
     public Long getId() {
@@ -170,6 +174,14 @@ public class AdminUserDTO {
 
     public void setAuthorities(Set<String> authorities) {
         this.authorities = authorities;
+    }
+
+    public Dealer getDealer() {
+        return dealer;
+    }
+
+    public void setDealer(Dealer dealer) {
+        this.dealer = dealer;
     }
 
     // prettier-ignore

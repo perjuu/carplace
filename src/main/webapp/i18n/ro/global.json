@@ -47,6 +47,14 @@
     "form": {
       "username.label": "Utilizator",
       "username.placeholder": "Numele de utilizator",
+      "name.label": "Dealer",
+      "name.placeholder": "Numele dealer-ului",
+      "city.label": "Oraș",
+      "city.placeholder": "Orașul dumneavoastră",
+      "address.label": "Adresă",
+      "address.placeholder": "Adresa dumneavoastră",
+      "phone.label": "Telefon",
+      "phone.placeholder": "Numărul dumneavoastră de telefon",
       "currentpassword.label": "Current password",
       "currentpassword.placeholder": "Current password",
       "newpassword.label": "Parolă nouă",
@@ -54,15 +62,7 @@
       "confirmpassword.label": "Confirma parolă",
       "confirmpassword.placeholder": "Confirmați noua parolă",
       "email.label": "Email",
-      "email.placeholder": "Emailul dumneavoastră",
-      "dealername.label": "Numele dealerului",
-      "dealername.placeholder": "Numele dvs. de dealer",
-      "city.label": "Oraș",
-      "city.placeholder": "Orașul tau",
-      "address.label": "Adresa",
-      "address.placeholder": "Adresa ta",
-      "phone.label": "Număr de Contact",
-      "phone.placeholder": "Numărul dvs. de contact"
+      "email.placeholder": "Emailul dumneavoastră"
     },
     "messages": {
       "info": {
@@ -97,6 +97,7 @@
           "minlength": "Emailul dumneavoastră trebuie să aibă cel puțin 5 caractere",
           "maxlength": "Emailul dumneavoastră nu poate avea mai mult de 50 de caractere."
         }
+
       }
     },
     "field": {
